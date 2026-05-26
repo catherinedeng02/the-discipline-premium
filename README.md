@@ -6,7 +6,7 @@ This project quantifies *behavioral drag* — the long-run cost of reacting emot
 
 The finding: the investor who sold in panic during downturns and re-entered only after recoveries ended the period with **34.6% less wealth — about $679,000 — than the investor who simply stayed invested.**
 
-🔗 **[View the interactive research note →]([LIVE_SITE_URL])**
+🔗 **[View the project →](https://catherinedeng02.github.io/the-discipline-premium/))**
 
 ---
 
