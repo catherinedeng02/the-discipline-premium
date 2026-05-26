@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Discipline Premium</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --panel: #faf9f6;
+    --ink: #1a1a18;
+    --muted: #6b6862;
+    --accent: #7a6a48;
+    --benchmark: #2f5d7c;
+    --reactive: #a8472f;
+    --line: #e3e0d8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+  }
+  .layout {
+    max-width: 1180px; margin: 0 auto;
+    display: flex; gap: 56px;
+    padding: 72px 40px;
+  }
+  .main { flex: 1; min-width: 0; max-width: 760px; }
+
+/* Table of contents */
+.toc {
+    width: 200px; flex-shrink: 0;
+    position: sticky; top: 72px;
+    align-self: flex-start;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+  }
+  .toc-label {
+    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 16px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--line);
+  }
+  .toc a {
+    display: block; font-size: 13px; color: var(--muted);
+    text-decoration: none; padding: 7px 0 7px 12px;
+    border-left: 2px solid var(--line);
+    transition: all 0.15s;
+  }
+  .toc a:hover { color: var(--ink); }
+  .toc a.active {
+    color: var(--ink); border-left-color: var(--accent);
+    font-weight: bold;
+  }
+  .toc a.active:before {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .toc a.passed:before {
+    border-color: var(--accent);
+  }
+
+  /* Masthead */
+  h1 {
+    font-size: 48px; font-weight: normal; line-height: 1.15;
+    letter-spacing: -0.5px; color: #14140f; margin-bottom: 14px;
+  }
+  .subtitle {
+    font-size: 19px; color: var(--muted); font-style: italic;
+    margin-bottom: 20px; line-height: 1.4;
+  }
+  .kicker {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; letter-spacing: 2px; color: var(--accent);
+  }
+  .pubdate {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 13px; color: var(--muted); margin-top: 8px;
+    padding-bottom: 28px; border-bottom: 2px solid var(--ink);
+    margin-bottom: 32px;
+  }
+  .abstract {
+    font-size: 19px; color: var(--ink); line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  /* Headline stats */
+  .headline-stat {
+    display: flex; gap: 44px; flex-wrap: wrap;
+    padding: 26px 0; margin-bottom: 56px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat-block { flex: 1; min-width: 160px; }
+  .stat-number { font-size: 40px; color: var(--accent); margin-bottom: 4px; }
+  .stat-label {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; color: var(--muted); letter-spacing: 0.3px;
+  }
+
+  /* Sections */
+  .section { margin-bottom: 60px; scroll-margin-top: 40px; }
+  .section-num {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; letter-spacing: 1.5px; color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .section-head {
+    font-size: 28px; font-weight: normal; margin-bottom: 20px;
+    color: #14140f; line-height: 1.25;
+  }
+  .section p { font-size: 16.5px; margin-bottom: 18px; color: var(--ink); }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* Chart */
+  .chart-frame { margin: 32px 0 12px; }
+  .chart-title {
+    font-size: 15px; font-family: -apple-system, Helvetica, Arial, sans-serif;
+    color: var(--ink); margin-bottom: 14px; font-weight: bold;
+  }
+  .chart-wrap {
+    position: relative; height: 420px;
+    border: 1px solid var(--line); padding: 20px;
+    background: var(--bg);
+  }
+  .chart-source {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 11px; color: var(--muted); margin-top: 8px;
+  }
+  .legend-row {
+    display: flex; gap: 24px; margin: 14px 0 0;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; color: var(--muted); flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 13px; height: 3px; display: inline-block; }
+  .loading { color: var(--muted); padding: 30px; }
+
+  /* Crisis */
+  .crisis-buttons { display: flex; gap: 10px; margin: 24px 0 22px; flex-wrap: wrap; }
+  .crisis-btn {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 13px; padding: 10px 18px;
+    background: var(--bg); border: 1px solid var(--line);
+    color: var(--ink); cursor: pointer;
+    transition: all 0.15s;
+  }
+  .crisis-btn:hover { border-color: var(--accent); }
+  .crisis-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .crisis-panel {
+    border: 1px solid var(--line); padding: 28px; background: var(--panel);
+  }
+  .crisis-name { font-size: 20px; margin-bottom: 4px; color: #14140f; }
+  .crisis-period {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; color: var(--muted); margin-bottom: 22px;
+  }
+  .crisis-grid {
+    display: flex; gap: 36px; flex-wrap: wrap;
+    padding: 20px 0; border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); margin-bottom: 20px;
+  }
+  .crisis-metric { flex: 1; min-width: 130px; }
+  .crisis-metric .num { font-size: 25px; color: var(--accent); }
+  .crisis-metric .lbl {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 11px; color: var(--muted);
+  }
+  .crisis-reading { font-size: 15.5px; color: var(--ink); line-height: 1.6; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+  th, td {
+    text-align: left; padding: 13px 16px;
+    border-bottom: 1px solid var(--line); font-size: 15px;
+  }
+  th {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--muted);
+  }
+  td .big { color: var(--accent); }
+
+  /* Pull quote */
+  .pullquote {
+    font-size: 25px; line-height: 1.5; color: #14140f;
+    font-style: italic; border-left: 3px solid var(--accent);
+    padding: 6px 0 6px 26px; margin: 40px 0;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 2px solid var(--ink);
+    padding-top: 24px; margin-top: 16px;
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 12px; color: var(--muted);
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 14px;
+  }
+  footer a { color: var(--ink); }
+  .footer-author { display: flex; align-items: center; gap: 9px; }
+  .li-icon {
+    width: 19px; height: 19px; display: inline-flex;
+    align-items: center; justify-content: center;
+    background: var(--ink); border-radius: 2px;
+  }
+  .li-icon svg { width: 11px; height: 11px; fill: var(--bg); }
+
+  @media (max-width: 920px) {
+    .toc { display: none; }
+    .layout { padding: 48px 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- TABLE OF CONTENTS -->
+<nav class="toc">
+    <div class="toc-label">Contents</div>
+    <a href="#scenario" class="toc-link">The Scenario</a>
+    <a href="#crises" class="toc-link">Crisis Case Studies</a>
+    <a href="#robustness" class="toc-link">Robustness</a>
+    <a href="#discussion" class="toc-link">Discussion</a>
+  </nav>
+
+  <div class="main">
+
+    <!-- MASTHEAD -->
+    <h1>The Discipline Premium</h1>
+    <div class="subtitle">
+      What 31 years of S&amp;P 500 data reveal about the cost of emotional investing
+    </div>
+    <div class="kicker">RESEARCH&nbsp;&nbsp;|&nbsp;&nbsp;BEHAVIORAL FINANCE</div>
+    <div class="pubdate" id="pubdate">May 24, 2026</div>
+
+    <p class="abstract">
+      This note quantifies the long-run cost of emotional decision-making in
+      equity investing. Using 31 years of S&amp;P 500 data, it compares two
+      investors who follow an identical monthly investment plan but differ in
+      one respect: one holds through market declines, while the other sells in
+      panic and re-enters only after a recovery. The reactive investor ends the
+      period with 34.6% less wealth, a shortfall that proves consistent across
+      a range of assumptions and concentrates around major market crises.
+    </p>
+
+    <!-- HEADLINE STATS -->
+    <div class="headline-stat" id="headlineStat">
+      <div class="loading">Loading results…</div>
+    </div>
+
+    <!-- SECTION 1: THE SCENARIO -->
+    <div class="section" id="scenario">
+      <div class="section-num">SECTION 01</div>
+      <h2 class="section-head">The Scenario</h2>
+      <p>
+        Two investors begin in January 1995 and contribute $1,000 to the
+        S&amp;P 500 every month for the next 31 years. The first investor
+        follows this plan without interruption and never sells, an approach
+        this note refers to as the Buy-and-Hold Benchmark. The second, the
+        Reactive Investor, follows the same plan in calm markets but sells the
+        entire holding to cash whenever the market falls far enough from its
+        prior peak, returning only once a clear rebound is underway.
+      </p>
+      <p>
+        The chart below traces both portfolios month by month. The two paths
+        are indistinguishable for years at a time, then separate sharply
+        whenever the Reactive Investor sells near a market low and buys back
+        at higher prices. Each of those moments is marked, and hovering over
+        any point shows the value of both portfolios in that month.
+      </p>
+
+      <div class="chart-frame">
+        <div class="chart-title">A 31-Year Comparison of Disciplined and Reactive Investors (1995&ndash;2026)</div>
+        <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
+        <div class="legend-row">
+          <span class="legend-item"><span class="swatch" style="background:#2f5d7c"></span>Buy-and-Hold Benchmark</span>
+          <span class="legend-item"><span class="swatch" style="background:#a8472f"></span>Reactive Investor</span>
+          <span class="legend-item"><span class="swatch" style="background:#7a6a48"></span>Panic and re-entry events</span>
+        </div>
+        <div class="chart-source" id="chartSource">
+          Source: Yahoo Finance (S&amp;P 500), cross-validated against FRED.
+        </div>
+      </div>
+
+      <p>
+        Both investors put in exactly the same amount of money, $377,000 in
+        total, and both were exposed to exactly the same market. The only
+        variable separating them is how each one responded to fear, which
+        makes the gap between the two lines a direct measure of the cost of
+        that response.
+      </p>
+    </div>
+
+    <!-- SECTION 2: CASE STUDIES -->
+    <div class="section" id="crises">
+      <div class="section-num">SECTION 02</div>
+      <h2 class="section-head">Case Studies</h2>
+      <p>
+        Panic is not triggered evenly through time, but strikes during the
+        market's worst moments. The three downturns below are the periods in
+        which the Reactive Investor actually sold, so they offer the clearest
+        view of when and how emotional decisions are made. Select a crisis to
+        see how the two investors moved through it.
+      </p>
+      <div class="crisis-buttons" id="crisisButtons"></div>
+      <div class="crisis-panel" id="crisisPanel">
+        <div class="loading">Loading…</div>
+      </div>
+      <p style="margin-top:22px;">
+        The shortfalls measured within these windows are smaller than the
+        34.6% figure for the full period, and that difference is itself the
+        point. A crisis window captures the immediate damage of selling, but
+        the larger cost comes later, as the Reactive Investor sits in cash
+        and misses the early, steepest part of each recovery. That foregone
+        growth then compounds silently for years, which is why the full cost
+        only becomes visible over decades rather than within any single
+        crisis.
+      </p>
+    </div>
+
+    <!-- SECTION 3: Robustness -->
+    <div class="section" id="robustness">
+      <div class="section-num">SECTION 03</div>
+      <h2 class="section-head">Robustness</h2>
+      <p>
+        A single result is only as credible as the assumption behind it. The
+        headline figure uses a 20% drawdown as the panic trigger, which is the
+        conventional definition of a bear market, but that specific number
+        should not carry the entire conclusion. To test this, the same
+        simulation is run with the Reactive Investor panicking at 15% and at
+        25% as well.
+      </p>
+      <table id="sensitivityTable"></table>
+      <p>
+        Across every threshold the pattern holds, and the reactive investor
+        finishes well behind the benchmark in each case. The relationship is
+        also orderly: a lower, more sensitive trigger leads to more frequent
+        selling and a larger shortfall, while a higher threshold reduces both.
+        Because the conclusion survives this range of assumptions rather than
+        depending on one chosen value, it can be read as a genuine finding
+        rather than an artifact of the setup.
+      </p>
+    </div>
+
+    <!-- SECTION 4: Discussion -->
+    <div class="section" id="discussion">
+      <div class="section-num">SECTION 04</div>
+      <h2 class="section-head">Discussion</h2>
+
+      <blockquote class="pullquote">
+        The market did not take this money. The investor's own reaction to
+        the market did.
+      </blockquote>
+
+      <p>
+        The Buy-and-Hold Benchmark is best understood as a benchmark rather
+        than a portrait of a typical person, and the phrase buy-and-hold here
+        means only that its invested shares are never sold. Its purpose is to
+        be free of emotion, so that the entire gap between the two portfolios
+        can be attributed to the one behavior that distinguishes them. A real
+        investor need not be perfectly disciplined to benefit from this
+        finding; they need only be aware of where the cost comes from.
+      </p>
+      <p>
+        Several deliberate simplifications shape these numbers, and stating
+        them plainly is part of the analysis. The model uses the S&amp;P 500
+        price index and excludes dividend reinvestment, so the true ending
+        wealth of both investors would be higher than shown. Because dividends
+        would lift both portfolios equally, the gap between them, which is the
+        actual subject of this study, is unaffected. The model also excludes
+        transaction costs and taxes, and it assumes cash earns no return,
+        which is a conservative choice that if anything understates the cost
+        of sitting out of the market. The panic rule itself is a simplified,
+        mechanical stand-in for a messier human reality, chosen because a
+        clear and testable rule is more honest than an arbitrary one.
+      </p>
+      <p>
+        What remains after these caveats is a straightforward conclusion. An
+        investor who contributed the same money to the same market, and
+        differed only in reacting to fear, gave up roughly a third of their
+        final wealth. The cost was not charged by the market but by the
+        decision to leave it, and that is the discipline premium this note
+        set out to measure.
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="footerData">
+        Data: Yahoo Finance (S&amp;P 500), validated against FRED.
+        Retrieved May 24, 2026.
+      </div>
+      <div class="footer-author">
+        <span>Zhuoyao Deng</span>
+        <a class="li-icon" href="https://www.linkedin.com/in/catherinedeng2025"
+           target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.98 0H8v16h4.96v-8.4c0-4.67 6.08-5.05 6.08 0V24H24V13.86c0-7.8-8.92-7.51-11.02-3.67V8z"/></svg>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+async function loadData() {
+  const res = await fetch('results.json');
+  return await res.json();
+}
+function formatMoney(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function renderHeadline(data) {
+  const s = data.summary;
+  document.getElementById('headlineStat').innerHTML = `
+    <div class="stat-block">
+      <div class="stat-number">${s.cost_pct}%</div>
+      <div class="stat-label">Less final wealth after 31 years</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number">${formatMoney(s.cost_dollars)}</div>
+      <div class="stat-label">Dollar cost of behavioral drag</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number">${s.panic_count}</div>
+      <div class="stat-label">Times the reactive investor sold in fear</div>
+    </div>
+  `;
+}
+
+function renderMainChart(data) {
+  const tl = data.timeline;
+  const labels = tl.map(p => p.date);
+  const benchmark = tl.map(p => p.benchmark_value);
+  const reactive = tl.map(p => p.reactive_value);
+  const events = tl.map(p => p.event ? p.reactive_value : null);
+
+  new Chart(document.getElementById('mainChart'), {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        { label: 'Buy-and-Hold Benchmark', data: benchmark,
+          borderColor: '#2f5d7c', backgroundColor: 'transparent',
+          borderWidth: 2, pointRadius: 0, tension: 0.1 },
+        { label: 'Reactive Investor', data: reactive,
+          borderColor: '#a8472f', backgroundColor: 'transparent',
+          borderWidth: 2, pointRadius: 0, tension: 0.1 },
+        { label: 'Panic and re-entry events', data: events,
+          borderColor: '#7a6a48', backgroundColor: '#7a6a48',
+          showLine: false, pointRadius: 5, pointHoverRadius: 7 },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1a1a18', borderColor: '#7a6a48', borderWidth: 1,
+          titleColor: '#ffffff', bodyColor: '#ffffff', padding: 12,
+          callbacks: {
+            label: function(context) {
+              if (context.parsed.y === null) return null;
+              return context.dataset.label + ': ' + formatMoney(context.parsed.y);
+            }
+          }
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true, text: 'Year',
+            color: '#6b6862',
+            font: { family: 'Helvetica, Arial, sans-serif', size: 12 },
+          },
+          ticks: { color: '#6b6862', maxTicksLimit: 10,
+            callback: function(val) { return this.getLabelForValue(val).substring(0,4); } },
+          grid: { color: '#f0eee8' },
+        },
+        y: {
+          title: {
+            display: true, text: 'Portfolio Value (USD)',
+            color: '#6b6862',
+            font: { family: 'Helvetica, Arial, sans-serif', size: 12 },
+          },
+          ticks: { color: '#6b6862',
+            callback: function(val) { return '$' + (val/1000) + 'k'; } },
+          grid: { color: '#f0eee8' },
+        },
+      },
+    },
+  });
+}
+
+function renderCrises(data) {
+  const crises = data.crises;
+  const btnRow = document.getElementById('crisisButtons');
+  const panel = document.getElementById('crisisPanel');
+
+  function show(idx) {
+    const c = crises[idx];
+    document.querySelectorAll('.crisis-btn').forEach((b, i) => {
+      b.classList.toggle('active', i === idx);
+    });
+    const reading =
+      'Through the ' + c.label + ', the Reactive Investor ended this window with ' +
+      formatMoney(c.reactive_value) + ' against ' + formatMoney(c.benchmark_value) +
+      ' for the Buy-and-Hold Benchmark, a shortfall of ' + c.cost_pct +
+      '% built up over ' + c.panic_count + ' panic decision(s) in this period. ' +
+      'The full long-run cost of those decisions compounds well beyond the ' +
+      'crisis window itself.';
+    panel.innerHTML = `
+      <div class="crisis-name">${c.label}</div>
+      <div class="crisis-period">${c.start} to ${c.end}</div>
+      <div class="crisis-grid">
+        <div class="crisis-metric">
+          <div class="num">${formatMoney(c.benchmark_value)}</div>
+          <div class="lbl">Buy-and-Hold Benchmark</div>
+        </div>
+        <div class="crisis-metric">
+          <div class="num">${formatMoney(c.reactive_value)}</div>
+          <div class="lbl">Reactive Investor</div>
+        </div>
+        <div class="crisis-metric">
+          <div class="num">${c.cost_pct}%</div>
+          <div class="lbl">Shortfall in this window</div>
+        </div>
+      </div>
+      <p class="crisis-reading">${reading}</p>
+    `;
+  }
+
+  crises.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'crisis-btn';
+    btn.textContent = c.label;
+    btn.onclick = () => show(i);
+    btnRow.appendChild(btn);
+  });
+  show(0);
+}
+
+function renderSensitivity(data) {
+  let html = `
+    <tr>
+      <th>Panic threshold</th>
+      <th>Reactive investor final value</th>
+      <th>Behavioral drag</th>
+      <th>Times panicked</th>
+    </tr>`;
+  data.sensitivity.forEach(r => {
+    html += `
+      <tr>
+        <td>${r.threshold_pct}% drawdown</td>
+        <td>${formatMoney(r.reactive_final)}</td>
+        <td class="big">&minus;${r.cost_pct}% &nbsp; (${formatMoney(r.cost_dollars)})</td>
+        <td>${r.panic_count}</td>
+      </tr>`;
+  });
+  document.getElementById('sensitivityTable').innerHTML = html;
+}
+
+function initTOC() {
+  const links = document.querySelectorAll('.toc-link');
+  const sections = Array.from(links).map(l =>
+    document.getElementById(l.getAttribute('href').substring(1))
+  );
+  function onScroll() {
+    let current = 0;
+    sections.forEach((sec, i) => {
+      if (sec && sec.getBoundingClientRect().top <= 120) current = i;
+    });
+    links.forEach((l, i) => l.classList.toggle('active', i === current));
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+}
+
+loadData().then(data => {
+  if (data.meta && data.meta.data_retrieved) {
+    document.getElementById('footerData').innerHTML =
+      'Data: Yahoo Finance (S&amp;P 500), validated against FRED. Retrieved '
+      + data.meta.data_retrieved + '.';
+  }
+  renderHeadline(data);
+  renderMainChart(data);
+  renderCrises(data);
+  renderSensitivity(data);
+  initTOC();
+}).catch(err => {
+  document.getElementById('headlineStat').innerHTML =
+    '<div class="loading">Could not load results.json — ' + err + '</div>';
+});
+</script>
+
+</body>
+</html>

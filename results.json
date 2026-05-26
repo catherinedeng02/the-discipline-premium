@@ -1,0 +1,3855 @@
+{
+  "meta": {
+    "project": "The Price of Panic",
+    "data_source": "Yahoo Finance (S&P 500, ^GSPC), validated against FRED",
+    "data_retrieved": "2026-05-26",
+    "period_start": "1995-01-31",
+    "period_end": "2026-05-31",
+    "months": 377,
+    "monthly_contribution": 1000,
+    "panic_threshold_main": 20,
+    "rebound_threshold": 15
+  },
+  "summary": {
+    "total_contributed": 377000,
+    "benchmark_final": 1960296,
+    "reactive_final": 1281188,
+    "cost_dollars": 679109,
+    "cost_pct": 34.6,
+    "panic_count": 9,
+    "reenter_count": 9
+  },
+  "sensitivity": [
+    {
+      "threshold_pct": 15,
+      "reactive_final": 1137784,
+      "cost_dollars": 822512,
+      "cost_pct": 42.0,
+      "panic_count": 12
+    },
+    {
+      "threshold_pct": 20,
+      "reactive_final": 1281188,
+      "cost_dollars": 679109,
+      "cost_pct": 34.6,
+      "panic_count": 9
+    },
+    {
+      "threshold_pct": 25,
+      "reactive_final": 1385885,
+      "cost_dollars": 574411,
+      "cost_pct": 29.3,
+      "panic_count": 7
+    }
+  ],
+  "crises": [
+    {
+      "label": "Dot-Com Crash",
+      "start": "2000-01-31",
+      "end": "2003-12-31",
+      "start_index": 60,
+      "end_index": 107,
+      "benchmark_value": 48279,
+      "reactive_value": 44036,
+      "cost_dollars": 4243,
+      "cost_pct": 8.8,
+      "panic_count": 2
+    },
+    {
+      "label": "Global Financial Crisis",
+      "start": "2007-10-31",
+      "end": "2013-03-31",
+      "start_index": 153,
+      "end_index": 218,
+      "benchmark_value": 87338,
+      "reactive_value": 69503,
+      "cost_dollars": 17835,
+      "cost_pct": 20.4,
+      "panic_count": 4
+    },
+    {
+      "label": "COVID-19 Crash",
+      "start": "2020-01-31",
+      "end": "2022-12-31",
+      "start_index": 300,
+      "end_index": 335,
+      "benchmark_value": 36641,
+      "reactive_value": 35304,
+      "cost_dollars": 1337,
+      "cost_pct": 3.6,
+      "panic_count": 1
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1995-01-31",
+      "price": 470.42,
+      "benchmark_value": 1000,
+      "reactive_value": 1000,
+      "invested": 1000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-02-28",
+      "price": 487.39,
+      "benchmark_value": 2036,
+      "reactive_value": 2036,
+      "invested": 2000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-03-31",
+      "price": 500.71,
+      "benchmark_value": 3092,
+      "reactive_value": 3092,
+      "invested": 3000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-04-30",
+      "price": 514.71,
+      "benchmark_value": 4178,
+      "reactive_value": 4178,
+      "invested": 4000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-05-31",
+      "price": 533.4,
+      "benchmark_value": 5330,
+      "reactive_value": 5330,
+      "invested": 5000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-06-30",
+      "price": 544.75,
+      "benchmark_value": 6443,
+      "reactive_value": 6443,
+      "invested": 6000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-07-31",
+      "price": 562.06,
+      "benchmark_value": 7648,
+      "reactive_value": 7648,
+      "invested": 7000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-08-31",
+      "price": 561.88,
+      "benchmark_value": 8646,
+      "reactive_value": 8646,
+      "invested": 8000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-09-30",
+      "price": 584.41,
+      "benchmark_value": 9992,
+      "reactive_value": 9992,
+      "invested": 9000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-10-31",
+      "price": 581.5,
+      "benchmark_value": 10942,
+      "reactive_value": 10942,
+      "invested": 10000,
+      "drawdown_pct": 0.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-11-30",
+      "price": 605.37,
+      "benchmark_value": 12392,
+      "reactive_value": 12392,
+      "invested": 11000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1995-12-31",
+      "price": 615.93,
+      "benchmark_value": 13608,
+      "reactive_value": 13608,
+      "invested": 12000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-01-31",
+      "price": 636.02,
+      "benchmark_value": 15052,
+      "reactive_value": 15052,
+      "invested": 13000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-02-29",
+      "price": 640.43,
+      "benchmark_value": 16156,
+      "reactive_value": 16156,
+      "invested": 14000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-03-31",
+      "price": 645.5,
+      "benchmark_value": 17284,
+      "reactive_value": 17284,
+      "invested": 15000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-04-30",
+      "price": 654.17,
+      "benchmark_value": 18516,
+      "reactive_value": 18516,
+      "invested": 16000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-05-31",
+      "price": 669.12,
+      "benchmark_value": 19939,
+      "reactive_value": 19939,
+      "invested": 17000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-06-30",
+      "price": 670.63,
+      "benchmark_value": 20984,
+      "reactive_value": 20984,
+      "invested": 18000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-07-31",
+      "price": 639.95,
+      "benchmark_value": 21024,
+      "reactive_value": 21024,
+      "invested": 19000,
+      "drawdown_pct": 4.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-08-31",
+      "price": 651.99,
+      "benchmark_value": 22420,
+      "reactive_value": 22420,
+      "invested": 20000,
+      "drawdown_pct": 2.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-09-30",
+      "price": 687.33,
+      "benchmark_value": 24635,
+      "reactive_value": 24635,
+      "invested": 21000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-10-31",
+      "price": 705.27,
+      "benchmark_value": 26278,
+      "reactive_value": 26278,
+      "invested": 22000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-11-30",
+      "price": 757.02,
+      "benchmark_value": 29206,
+      "reactive_value": 29206,
+      "invested": 23000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1996-12-31",
+      "price": 740.74,
+      "benchmark_value": 29578,
+      "reactive_value": 29578,
+      "invested": 24000,
+      "drawdown_pct": 2.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-01-31",
+      "price": 786.16,
+      "benchmark_value": 32392,
+      "reactive_value": 32392,
+      "invested": 25000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-02-28",
+      "price": 790.82,
+      "benchmark_value": 33584,
+      "reactive_value": 33584,
+      "invested": 26000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-03-31",
+      "price": 757.12,
+      "benchmark_value": 33153,
+      "reactive_value": 33153,
+      "invested": 27000,
+      "drawdown_pct": 4.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-04-30",
+      "price": 801.34,
+      "benchmark_value": 36089,
+      "reactive_value": 36089,
+      "invested": 28000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-05-31",
+      "price": 848.28,
+      "benchmark_value": 39203,
+      "reactive_value": 39203,
+      "invested": 29000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-06-30",
+      "price": 885.14,
+      "benchmark_value": 41906,
+      "reactive_value": 41906,
+      "invested": 30000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-07-31",
+      "price": 954.31,
+      "benchmark_value": 46181,
+      "reactive_value": 46181,
+      "invested": 31000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-08-31",
+      "price": 899.47,
+      "benchmark_value": 44527,
+      "reactive_value": 44527,
+      "invested": 32000,
+      "drawdown_pct": 5.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-09-30",
+      "price": 947.28,
+      "benchmark_value": 47894,
+      "reactive_value": 47894,
+      "invested": 33000,
+      "drawdown_pct": 0.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-10-31",
+      "price": 914.62,
+      "benchmark_value": 47243,
+      "reactive_value": 47243,
+      "invested": 34000,
+      "drawdown_pct": 4.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-11-30",
+      "price": 955.4,
+      "benchmark_value": 50349,
+      "reactive_value": 50349,
+      "invested": 35000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1997-12-31",
+      "price": 970.43,
+      "benchmark_value": 52141,
+      "reactive_value": 52141,
+      "invested": 36000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-01-31",
+      "price": 980.28,
+      "benchmark_value": 53671,
+      "reactive_value": 53671,
+      "invested": 37000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-02-28",
+      "price": 1049.34,
+      "benchmark_value": 58452,
+      "reactive_value": 58452,
+      "invested": 38000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-03-31",
+      "price": 1101.75,
+      "benchmark_value": 62371,
+      "reactive_value": 62371,
+      "invested": 39000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-04-30",
+      "price": 1111.75,
+      "benchmark_value": 63937,
+      "reactive_value": 63937,
+      "invested": 40000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-05-31",
+      "price": 1090.82,
+      "benchmark_value": 63733,
+      "reactive_value": 63733,
+      "invested": 41000,
+      "drawdown_pct": 1.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-06-30",
+      "price": 1133.84,
+      "benchmark_value": 67247,
+      "reactive_value": 67247,
+      "invested": 42000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-07-31",
+      "price": 1120.67,
+      "benchmark_value": 67466,
+      "reactive_value": 67466,
+      "invested": 43000,
+      "drawdown_pct": 1.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-08-31",
+      "price": 957.28,
+      "benchmark_value": 58630,
+      "reactive_value": 58630,
+      "invested": 44000,
+      "drawdown_pct": 15.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-09-30",
+      "price": 1017.01,
+      "benchmark_value": 63288,
+      "reactive_value": 63288,
+      "invested": 45000,
+      "drawdown_pct": 10.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-10-31",
+      "price": 1098.67,
+      "benchmark_value": 69369,
+      "reactive_value": 69369,
+      "invested": 46000,
+      "drawdown_pct": 3.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-11-30",
+      "price": 1163.63,
+      "benchmark_value": 74471,
+      "reactive_value": 74471,
+      "invested": 47000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1998-12-31",
+      "price": 1229.23,
+      "benchmark_value": 79669,
+      "reactive_value": 79669,
+      "invested": 48000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-01-31",
+      "price": 1279.64,
+      "benchmark_value": 83937,
+      "reactive_value": 83937,
+      "invested": 49000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-02-28",
+      "price": 1238.33,
+      "benchmark_value": 82227,
+      "reactive_value": 82227,
+      "invested": 50000,
+      "drawdown_pct": 3.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-03-31",
+      "price": 1286.37,
+      "benchmark_value": 86417,
+      "reactive_value": 86417,
+      "invested": 51000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-04-30",
+      "price": 1335.18,
+      "benchmark_value": 90696,
+      "reactive_value": 90696,
+      "invested": 52000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-05-31",
+      "price": 1301.84,
+      "benchmark_value": 89431,
+      "reactive_value": 89431,
+      "invested": 53000,
+      "drawdown_pct": 2.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-06-30",
+      "price": 1372.71,
+      "benchmark_value": 95300,
+      "reactive_value": 95300,
+      "invested": 54000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-07-31",
+      "price": 1328.72,
+      "benchmark_value": 93246,
+      "reactive_value": 93246,
+      "invested": 55000,
+      "drawdown_pct": 3.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-08-31",
+      "price": 1320.41,
+      "benchmark_value": 93662,
+      "reactive_value": 93662,
+      "invested": 56000,
+      "drawdown_pct": 3.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-09-30",
+      "price": 1282.71,
+      "benchmark_value": 91988,
+      "reactive_value": 91988,
+      "invested": 57000,
+      "drawdown_pct": 6.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-10-31",
+      "price": 1362.93,
+      "benchmark_value": 98741,
+      "reactive_value": 98741,
+      "invested": 58000,
+      "drawdown_pct": 0.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-11-30",
+      "price": 1388.91,
+      "benchmark_value": 101623,
+      "reactive_value": 101623,
+      "invested": 59000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "1999-12-31",
+      "price": 1469.25,
+      "benchmark_value": 108502,
+      "reactive_value": 108502,
+      "invested": 60000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-01-31",
+      "price": 1394.46,
+      "benchmark_value": 103978,
+      "reactive_value": 103978,
+      "invested": 61000,
+      "drawdown_pct": 5.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-02-29",
+      "price": 1366.42,
+      "benchmark_value": 102888,
+      "reactive_value": 102888,
+      "invested": 62000,
+      "drawdown_pct": 7.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-03-31",
+      "price": 1498.58,
+      "benchmark_value": 113839,
+      "reactive_value": 113839,
+      "invested": 63000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-04-30",
+      "price": 1452.43,
+      "benchmark_value": 111333,
+      "reactive_value": 111333,
+      "invested": 64000,
+      "drawdown_pct": 3.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-05-31",
+      "price": 1420.6,
+      "benchmark_value": 109893,
+      "reactive_value": 109893,
+      "invested": 65000,
+      "drawdown_pct": 5.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-06-30",
+      "price": 1454.6,
+      "benchmark_value": 113523,
+      "reactive_value": 113523,
+      "invested": 66000,
+      "drawdown_pct": 2.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-07-31",
+      "price": 1430.83,
+      "benchmark_value": 112668,
+      "reactive_value": 112668,
+      "invested": 67000,
+      "drawdown_pct": 4.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-08-31",
+      "price": 1517.68,
+      "benchmark_value": 120507,
+      "reactive_value": 120507,
+      "invested": 68000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-09-30",
+      "price": 1436.51,
+      "benchmark_value": 115062,
+      "reactive_value": 115062,
+      "invested": 69000,
+      "drawdown_pct": 5.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-10-31",
+      "price": 1429.4,
+      "benchmark_value": 115493,
+      "reactive_value": 115493,
+      "invested": 70000,
+      "drawdown_pct": 5.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-11-30",
+      "price": 1314.95,
+      "benchmark_value": 107245,
+      "reactive_value": 107245,
+      "invested": 71000,
+      "drawdown_pct": 13.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2000-12-31",
+      "price": 1320.28,
+      "benchmark_value": 108680,
+      "reactive_value": 108680,
+      "invested": 72000,
+      "drawdown_pct": 13.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2001-01-31",
+      "price": 1366.01,
+      "benchmark_value": 113444,
+      "reactive_value": 113444,
+      "invested": 73000,
+      "drawdown_pct": 10.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2001-02-28",
+      "price": 1239.94,
+      "benchmark_value": 103974,
+      "reactive_value": 103974,
+      "invested": 74000,
+      "drawdown_pct": 18.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2001-03-31",
+      "price": 1160.33,
+      "benchmark_value": 98299,
+      "reactive_value": 97299,
+      "invested": 75000,
+      "drawdown_pct": 23.5,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2001-04-30",
+      "price": 1249.46,
+      "benchmark_value": 106850,
+      "reactive_value": 98299,
+      "invested": 76000,
+      "drawdown_pct": 17.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-05-31",
+      "price": 1255.82,
+      "benchmark_value": 108393,
+      "reactive_value": 99299,
+      "invested": 77000,
+      "drawdown_pct": 17.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-06-30",
+      "price": 1224.38,
+      "benchmark_value": 106680,
+      "reactive_value": 100299,
+      "invested": 78000,
+      "drawdown_pct": 19.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-07-31",
+      "price": 1211.23,
+      "benchmark_value": 106534,
+      "reactive_value": 101299,
+      "invested": 79000,
+      "drawdown_pct": 20.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-08-31",
+      "price": 1133.58,
+      "benchmark_value": 100704,
+      "reactive_value": 102299,
+      "invested": 80000,
+      "drawdown_pct": 25.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-09-30",
+      "price": 1040.94,
+      "benchmark_value": 93474,
+      "reactive_value": 103299,
+      "invested": 81000,
+      "drawdown_pct": 31.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-10-31",
+      "price": 1059.78,
+      "benchmark_value": 96166,
+      "reactive_value": 104299,
+      "invested": 82000,
+      "drawdown_pct": 30.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-11-30",
+      "price": 1139.45,
+      "benchmark_value": 104396,
+      "reactive_value": 105299,
+      "invested": 83000,
+      "drawdown_pct": 24.9,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2001-12-31",
+      "price": 1148.08,
+      "benchmark_value": 106186,
+      "reactive_value": 106299,
+      "invested": 84000,
+      "drawdown_pct": 24.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-01-31",
+      "price": 1130.2,
+      "benchmark_value": 105532,
+      "reactive_value": 107299,
+      "invested": 85000,
+      "drawdown_pct": 25.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-02-28",
+      "price": 1106.73,
+      "benchmark_value": 104341,
+      "reactive_value": 108299,
+      "invested": 86000,
+      "drawdown_pct": 27.1,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-03-31",
+      "price": 1147.39,
+      "benchmark_value": 109174,
+      "reactive_value": 109299,
+      "invested": 87000,
+      "drawdown_pct": 24.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-04-30",
+      "price": 1076.92,
+      "benchmark_value": 103469,
+      "reactive_value": 110299,
+      "invested": 88000,
+      "drawdown_pct": 29.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-05-31",
+      "price": 1067.14,
+      "benchmark_value": 103529,
+      "reactive_value": 111299,
+      "invested": 89000,
+      "drawdown_pct": 29.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-06-30",
+      "price": 989.82,
+      "benchmark_value": 97028,
+      "reactive_value": 112299,
+      "invested": 90000,
+      "drawdown_pct": 34.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-07-31",
+      "price": 911.62,
+      "benchmark_value": 90363,
+      "reactive_value": 113299,
+      "invested": 91000,
+      "drawdown_pct": 39.9,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-08-31",
+      "price": 916.07,
+      "benchmark_value": 91804,
+      "reactive_value": 114299,
+      "invested": 92000,
+      "drawdown_pct": 39.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-09-30",
+      "price": 815.28,
+      "benchmark_value": 82703,
+      "reactive_value": 115299,
+      "invested": 93000,
+      "drawdown_pct": 46.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-10-31",
+      "price": 885.76,
+      "benchmark_value": 90853,
+      "reactive_value": 116299,
+      "invested": 94000,
+      "drawdown_pct": 41.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-11-30",
+      "price": 936.31,
+      "benchmark_value": 97038,
+      "reactive_value": 117299,
+      "invested": 95000,
+      "drawdown_pct": 38.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2002-12-31",
+      "price": 879.82,
+      "benchmark_value": 92183,
+      "reactive_value": 118299,
+      "invested": 96000,
+      "drawdown_pct": 42.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-01-31",
+      "price": 855.7,
+      "benchmark_value": 90656,
+      "reactive_value": 119299,
+      "invested": 97000,
+      "drawdown_pct": 43.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-02-28",
+      "price": 841.15,
+      "benchmark_value": 90114,
+      "reactive_value": 120299,
+      "invested": 98000,
+      "drawdown_pct": 44.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-03-31",
+      "price": 848.18,
+      "benchmark_value": 91867,
+      "reactive_value": 121299,
+      "invested": 99000,
+      "drawdown_pct": 44.1,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-04-30",
+      "price": 916.92,
+      "benchmark_value": 100313,
+      "reactive_value": 122299,
+      "invested": 100000,
+      "drawdown_pct": 39.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-05-31",
+      "price": 963.59,
+      "benchmark_value": 106419,
+      "reactive_value": 123299,
+      "invested": 101000,
+      "drawdown_pct": 36.5,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2003-06-30",
+      "price": 974.5,
+      "benchmark_value": 108623,
+      "reactive_value": 124695,
+      "invested": 102000,
+      "drawdown_pct": 35.8,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2003-07-31",
+      "price": 990.31,
+      "benchmark_value": 111386,
+      "reactive_value": 125695,
+      "invested": 103000,
+      "drawdown_pct": 34.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-08-31",
+      "price": 1008.01,
+      "benchmark_value": 114377,
+      "reactive_value": 126695,
+      "invested": 104000,
+      "drawdown_pct": 33.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-09-30",
+      "price": 995.97,
+      "benchmark_value": 114010,
+      "reactive_value": 127695,
+      "invested": 105000,
+      "drawdown_pct": 34.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-10-31",
+      "price": 1050.71,
+      "benchmark_value": 121277,
+      "reactive_value": 128695,
+      "invested": 106000,
+      "drawdown_pct": 30.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-11-30",
+      "price": 1058.2,
+      "benchmark_value": 123141,
+      "reactive_value": 129695,
+      "invested": 107000,
+      "drawdown_pct": 30.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2003-12-31",
+      "price": 1111.92,
+      "benchmark_value": 130392,
+      "reactive_value": 130695,
+      "invested": 108000,
+      "drawdown_pct": 26.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-01-31",
+      "price": 1131.13,
+      "benchmark_value": 133645,
+      "reactive_value": 131695,
+      "invested": 109000,
+      "drawdown_pct": 25.5,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2004-02-29",
+      "price": 1144.94,
+      "benchmark_value": 136277,
+      "reactive_value": 133303,
+      "invested": 110000,
+      "drawdown_pct": 24.6,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2004-03-31",
+      "price": 1126.21,
+      "benchmark_value": 135047,
+      "reactive_value": 134303,
+      "invested": 111000,
+      "drawdown_pct": 25.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-04-30",
+      "price": 1107.3,
+      "benchmark_value": 133780,
+      "reactive_value": 135303,
+      "invested": 112000,
+      "drawdown_pct": 27.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-05-31",
+      "price": 1120.68,
+      "benchmark_value": 136396,
+      "reactive_value": 136303,
+      "invested": 113000,
+      "drawdown_pct": 26.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-06-30",
+      "price": 1140.84,
+      "benchmark_value": 139850,
+      "reactive_value": 137303,
+      "invested": 114000,
+      "drawdown_pct": 24.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-07-31",
+      "price": 1101.72,
+      "benchmark_value": 136055,
+      "reactive_value": 138303,
+      "invested": 115000,
+      "drawdown_pct": 27.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-08-31",
+      "price": 1104.24,
+      "benchmark_value": 137366,
+      "reactive_value": 139303,
+      "invested": 116000,
+      "drawdown_pct": 27.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-09-30",
+      "price": 1114.58,
+      "benchmark_value": 139652,
+      "reactive_value": 140303,
+      "invested": 117000,
+      "drawdown_pct": 26.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-10-31",
+      "price": 1130.2,
+      "benchmark_value": 142609,
+      "reactive_value": 141303,
+      "invested": 118000,
+      "drawdown_pct": 25.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-11-30",
+      "price": 1173.82,
+      "benchmark_value": 149113,
+      "reactive_value": 142303,
+      "invested": 119000,
+      "drawdown_pct": 22.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2004-12-31",
+      "price": 1211.92,
+      "benchmark_value": 154953,
+      "reactive_value": 143303,
+      "invested": 120000,
+      "drawdown_pct": 20.1,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-01-31",
+      "price": 1181.27,
+      "benchmark_value": 152034,
+      "reactive_value": 144303,
+      "invested": 121000,
+      "drawdown_pct": 22.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-02-28",
+      "price": 1203.6,
+      "benchmark_value": 155908,
+      "reactive_value": 145303,
+      "invested": 122000,
+      "drawdown_pct": 20.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-03-31",
+      "price": 1180.59,
+      "benchmark_value": 153928,
+      "reactive_value": 146303,
+      "invested": 123000,
+      "drawdown_pct": 22.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-04-30",
+      "price": 1156.85,
+      "benchmark_value": 151832,
+      "reactive_value": 147303,
+      "invested": 124000,
+      "drawdown_pct": 23.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-05-31",
+      "price": 1191.5,
+      "benchmark_value": 157380,
+      "reactive_value": 148303,
+      "invested": 125000,
+      "drawdown_pct": 21.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-06-30",
+      "price": 1191.33,
+      "benchmark_value": 158358,
+      "reactive_value": 149303,
+      "invested": 126000,
+      "drawdown_pct": 21.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-07-31",
+      "price": 1234.18,
+      "benchmark_value": 165053,
+      "reactive_value": 150303,
+      "invested": 127000,
+      "drawdown_pct": 18.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-08-31",
+      "price": 1220.33,
+      "benchmark_value": 164201,
+      "reactive_value": 151303,
+      "invested": 128000,
+      "drawdown_pct": 19.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-09-30",
+      "price": 1228.81,
+      "benchmark_value": 166342,
+      "reactive_value": 152303,
+      "invested": 129000,
+      "drawdown_pct": 19.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-10-31",
+      "price": 1207.01,
+      "benchmark_value": 164391,
+      "reactive_value": 153303,
+      "invested": 130000,
+      "drawdown_pct": 20.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-11-30",
+      "price": 1249.48,
+      "benchmark_value": 171175,
+      "reactive_value": 154303,
+      "invested": 131000,
+      "drawdown_pct": 17.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2005-12-31",
+      "price": 1248.29,
+      "benchmark_value": 172012,
+      "reactive_value": 155303,
+      "invested": 132000,
+      "drawdown_pct": 17.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2006-01-31",
+      "price": 1280.08,
+      "benchmark_value": 177393,
+      "reactive_value": 156303,
+      "invested": 133000,
+      "drawdown_pct": 15.7,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2006-02-28",
+      "price": 1280.66,
+      "benchmark_value": 178473,
+      "reactive_value": 157373,
+      "invested": 134000,
+      "drawdown_pct": 15.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-03-31",
+      "price": 1294.87,
+      "benchmark_value": 181454,
+      "reactive_value": 160120,
+      "invested": 135000,
+      "drawdown_pct": 14.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-04-30",
+      "price": 1310.61,
+      "benchmark_value": 184659,
+      "reactive_value": 163066,
+      "invested": 136000,
+      "drawdown_pct": 13.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-05-31",
+      "price": 1270.09,
+      "benchmark_value": 179950,
+      "reactive_value": 159025,
+      "invested": 137000,
+      "drawdown_pct": 16.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-06-30",
+      "price": 1270.2,
+      "benchmark_value": 180966,
+      "reactive_value": 160038,
+      "invested": 138000,
+      "drawdown_pct": 16.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-07-31",
+      "price": 1276.66,
+      "benchmark_value": 182886,
+      "reactive_value": 161852,
+      "invested": 139000,
+      "drawdown_pct": 15.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-08-31",
+      "price": 1303.82,
+      "benchmark_value": 187777,
+      "reactive_value": 166295,
+      "invested": 140000,
+      "drawdown_pct": 14.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-09-30",
+      "price": 1335.85,
+      "benchmark_value": 193390,
+      "reactive_value": 171381,
+      "invested": 141000,
+      "drawdown_pct": 12.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-10-31",
+      "price": 1377.94,
+      "benchmark_value": 200483,
+      "reactive_value": 177781,
+      "invested": 142000,
+      "drawdown_pct": 9.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-11-30",
+      "price": 1400.63,
+      "benchmark_value": 204785,
+      "reactive_value": 181708,
+      "invested": 143000,
+      "drawdown_pct": 7.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2006-12-31",
+      "price": 1418.3,
+      "benchmark_value": 208368,
+      "reactive_value": 185000,
+      "invested": 144000,
+      "drawdown_pct": 6.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-01-31",
+      "price": 1438.24,
+      "benchmark_value": 212298,
+      "reactive_value": 188601,
+      "invested": 145000,
+      "drawdown_pct": 5.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-02-28",
+      "price": 1406.82,
+      "benchmark_value": 208660,
+      "reactive_value": 185481,
+      "invested": 146000,
+      "drawdown_pct": 7.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-03-31",
+      "price": 1420.86,
+      "benchmark_value": 211742,
+      "reactive_value": 188332,
+      "invested": 147000,
+      "drawdown_pct": 6.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-04-30",
+      "price": 1482.37,
+      "benchmark_value": 221909,
+      "reactive_value": 197485,
+      "invested": 148000,
+      "drawdown_pct": 2.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-05-31",
+      "price": 1530.62,
+      "benchmark_value": 230132,
+      "reactive_value": 204913,
+      "invested": 149000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-06-30",
+      "price": 1503.35,
+      "benchmark_value": 227031,
+      "reactive_value": 202262,
+      "invested": 150000,
+      "drawdown_pct": 1.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-07-31",
+      "price": 1455.27,
+      "benchmark_value": 220771,
+      "reactive_value": 196794,
+      "invested": 151000,
+      "drawdown_pct": 4.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-08-31",
+      "price": 1473.99,
+      "benchmark_value": 224611,
+      "reactive_value": 200325,
+      "invested": 152000,
+      "drawdown_pct": 3.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-09-30",
+      "price": 1526.75,
+      "benchmark_value": 233650,
+      "reactive_value": 208496,
+      "invested": 153000,
+      "drawdown_pct": 0.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-10-31",
+      "price": 1549.38,
+      "benchmark_value": 238113,
+      "reactive_value": 212586,
+      "invested": 154000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-11-30",
+      "price": 1481.14,
+      "benchmark_value": 228626,
+      "reactive_value": 204223,
+      "invested": 155000,
+      "drawdown_pct": 4.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2007-12-31",
+      "price": 1468.36,
+      "benchmark_value": 227653,
+      "reactive_value": 203461,
+      "invested": 156000,
+      "drawdown_pct": 5.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-01-31",
+      "price": 1378.55,
+      "benchmark_value": 214729,
+      "reactive_value": 192017,
+      "invested": 157000,
+      "drawdown_pct": 11.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-02-29",
+      "price": 1330.63,
+      "benchmark_value": 208265,
+      "reactive_value": 186342,
+      "invested": 158000,
+      "drawdown_pct": 14.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-03-31",
+      "price": 1322.7,
+      "benchmark_value": 208024,
+      "reactive_value": 186231,
+      "invested": 159000,
+      "drawdown_pct": 14.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-04-30",
+      "price": 1385.59,
+      "benchmark_value": 218915,
+      "reactive_value": 196086,
+      "invested": 160000,
+      "drawdown_pct": 10.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-05-31",
+      "price": 1400.38,
+      "benchmark_value": 222252,
+      "reactive_value": 199179,
+      "invested": 161000,
+      "drawdown_pct": 9.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-06-30",
+      "price": 1280.0,
+      "benchmark_value": 204146,
+      "reactive_value": 183057,
+      "invested": 162000,
+      "drawdown_pct": 17.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-07-31",
+      "price": 1267.38,
+      "benchmark_value": 203133,
+      "reactive_value": 182252,
+      "invested": 163000,
+      "drawdown_pct": 18.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-08-31",
+      "price": 1282.83,
+      "benchmark_value": 206610,
+      "reactive_value": 185474,
+      "invested": 164000,
+      "drawdown_pct": 17.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2008-09-30",
+      "price": 1166.36,
+      "benchmark_value": 188851,
+      "reactive_value": 168635,
+      "invested": 165000,
+      "drawdown_pct": 24.7,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2008-10-31",
+      "price": 968.75,
+      "benchmark_value": 157855,
+      "reactive_value": 169635,
+      "invested": 166000,
+      "drawdown_pct": 37.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2008-11-30",
+      "price": 896.24,
+      "benchmark_value": 147040,
+      "reactive_value": 170635,
+      "invested": 167000,
+      "drawdown_pct": 42.2,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2008-12-31",
+      "price": 903.25,
+      "benchmark_value": 149190,
+      "reactive_value": 171635,
+      "invested": 168000,
+      "drawdown_pct": 41.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-01-31",
+      "price": 825.88,
+      "benchmark_value": 137411,
+      "reactive_value": 172635,
+      "invested": 169000,
+      "drawdown_pct": 46.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-02-28",
+      "price": 735.09,
+      "benchmark_value": 123305,
+      "reactive_value": 173635,
+      "invested": 170000,
+      "drawdown_pct": 52.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-03-31",
+      "price": 797.87,
+      "benchmark_value": 134836,
+      "reactive_value": 174635,
+      "invested": 171000,
+      "drawdown_pct": 48.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-04-30",
+      "price": 872.81,
+      "benchmark_value": 148500,
+      "reactive_value": 175635,
+      "invested": 172000,
+      "drawdown_pct": 43.7,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2009-05-31",
+      "price": 919.14,
+      "benchmark_value": 157383,
+      "reactive_value": 184958,
+      "invested": 173000,
+      "drawdown_pct": 40.7,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2009-06-30",
+      "price": 919.32,
+      "benchmark_value": 158414,
+      "reactive_value": 185958,
+      "invested": 174000,
+      "drawdown_pct": 40.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-07-31",
+      "price": 987.48,
+      "benchmark_value": 171159,
+      "reactive_value": 186958,
+      "invested": 175000,
+      "drawdown_pct": 36.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-08-31",
+      "price": 1020.62,
+      "benchmark_value": 177903,
+      "reactive_value": 187958,
+      "invested": 176000,
+      "drawdown_pct": 34.1,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-09-30",
+      "price": 1057.08,
+      "benchmark_value": 185258,
+      "reactive_value": 188958,
+      "invested": 177000,
+      "drawdown_pct": 31.8,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2009-10-31",
+      "price": 1036.19,
+      "benchmark_value": 182597,
+      "reactive_value": 185223,
+      "invested": 178000,
+      "drawdown_pct": 33.1,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2009-11-30",
+      "price": 1095.63,
+      "benchmark_value": 194072,
+      "reactive_value": 186223,
+      "invested": 179000,
+      "drawdown_pct": 29.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2009-12-31",
+      "price": 1115.1,
+      "benchmark_value": 198521,
+      "reactive_value": 187223,
+      "invested": 180000,
+      "drawdown_pct": 28.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-01-31",
+      "price": 1073.87,
+      "benchmark_value": 192180,
+      "reactive_value": 188223,
+      "invested": 181000,
+      "drawdown_pct": 30.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-02-28",
+      "price": 1104.49,
+      "benchmark_value": 198660,
+      "reactive_value": 189223,
+      "invested": 182000,
+      "drawdown_pct": 28.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-03-31",
+      "price": 1169.43,
+      "benchmark_value": 211341,
+      "reactive_value": 190223,
+      "invested": 183000,
+      "drawdown_pct": 24.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-04-30",
+      "price": 1186.69,
+      "benchmark_value": 215460,
+      "reactive_value": 191223,
+      "invested": 184000,
+      "drawdown_pct": 23.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-05-31",
+      "price": 1089.41,
+      "benchmark_value": 198797,
+      "reactive_value": 192223,
+      "invested": 185000,
+      "drawdown_pct": 29.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-06-30",
+      "price": 1030.71,
+      "benchmark_value": 189086,
+      "reactive_value": 193223,
+      "invested": 186000,
+      "drawdown_pct": 33.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-07-31",
+      "price": 1101.6,
+      "benchmark_value": 203091,
+      "reactive_value": 194223,
+      "invested": 187000,
+      "drawdown_pct": 28.9,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-08-31",
+      "price": 1049.33,
+      "benchmark_value": 194454,
+      "reactive_value": 195223,
+      "invested": 188000,
+      "drawdown_pct": 32.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-09-30",
+      "price": 1141.2,
+      "benchmark_value": 212479,
+      "reactive_value": 196223,
+      "invested": 189000,
+      "drawdown_pct": 26.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-10-31",
+      "price": 1183.26,
+      "benchmark_value": 221310,
+      "reactive_value": 197223,
+      "invested": 190000,
+      "drawdown_pct": 23.6,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-11-30",
+      "price": 1180.55,
+      "benchmark_value": 221803,
+      "reactive_value": 198223,
+      "invested": 191000,
+      "drawdown_pct": 23.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2010-12-31",
+      "price": 1257.64,
+      "benchmark_value": 237287,
+      "reactive_value": 199223,
+      "invested": 192000,
+      "drawdown_pct": 18.8,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2011-01-31",
+      "price": 1286.12,
+      "benchmark_value": 243660,
+      "reactive_value": 204735,
+      "invested": 193000,
+      "drawdown_pct": 17.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-02-28",
+      "price": 1327.22,
+      "benchmark_value": 252447,
+      "reactive_value": 212277,
+      "invested": 194000,
+      "drawdown_pct": 14.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-03-31",
+      "price": 1325.83,
+      "benchmark_value": 253182,
+      "reactive_value": 213055,
+      "invested": 195000,
+      "drawdown_pct": 14.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-04-30",
+      "price": 1363.61,
+      "benchmark_value": 261397,
+      "reactive_value": 220126,
+      "invested": 196000,
+      "drawdown_pct": 12.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-05-31",
+      "price": 1345.2,
+      "benchmark_value": 258868,
+      "reactive_value": 218154,
+      "invested": 197000,
+      "drawdown_pct": 13.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-06-30",
+      "price": 1320.64,
+      "benchmark_value": 255142,
+      "reactive_value": 215171,
+      "invested": 198000,
+      "drawdown_pct": 14.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-07-31",
+      "price": 1292.28,
+      "benchmark_value": 250663,
+      "reactive_value": 211551,
+      "invested": 199000,
+      "drawdown_pct": 16.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2011-08-31",
+      "price": 1218.89,
+      "benchmark_value": 237427,
+      "reactive_value": 199537,
+      "invested": 200000,
+      "drawdown_pct": 21.3,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2011-09-30",
+      "price": 1131.42,
+      "benchmark_value": 221389,
+      "reactive_value": 200537,
+      "invested": 201000,
+      "drawdown_pct": 27.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2011-10-31",
+      "price": 1253.3,
+      "benchmark_value": 246238,
+      "reactive_value": 201537,
+      "invested": 202000,
+      "drawdown_pct": 19.1,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2011-11-30",
+      "price": 1246.96,
+      "benchmark_value": 245992,
+      "reactive_value": 202537,
+      "invested": 203000,
+      "drawdown_pct": 19.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2011-12-31",
+      "price": 1257.6,
+      "benchmark_value": 249091,
+      "reactive_value": 203537,
+      "invested": 204000,
+      "drawdown_pct": 18.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2012-01-31",
+      "price": 1312.41,
+      "benchmark_value": 260947,
+      "reactive_value": 204537,
+      "invested": 205000,
+      "drawdown_pct": 15.3,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2012-02-29",
+      "price": 1365.68,
+      "benchmark_value": 272539,
+      "reactive_value": 213839,
+      "invested": 206000,
+      "drawdown_pct": 11.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-03-31",
+      "price": 1408.47,
+      "benchmark_value": 282078,
+      "reactive_value": 221539,
+      "invested": 207000,
+      "drawdown_pct": 9.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-04-30",
+      "price": 1397.91,
+      "benchmark_value": 280963,
+      "reactive_value": 220878,
+      "invested": 208000,
+      "drawdown_pct": 9.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-05-31",
+      "price": 1310.33,
+      "benchmark_value": 264361,
+      "reactive_value": 208039,
+      "invested": 209000,
+      "drawdown_pct": 15.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-06-30",
+      "price": 1362.16,
+      "benchmark_value": 275817,
+      "reactive_value": 217268,
+      "invested": 210000,
+      "drawdown_pct": 12.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-07-31",
+      "price": 1379.32,
+      "benchmark_value": 280292,
+      "reactive_value": 221006,
+      "invested": 211000,
+      "drawdown_pct": 11.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-08-31",
+      "price": 1406.58,
+      "benchmark_value": 286832,
+      "reactive_value": 226373,
+      "invested": 212000,
+      "drawdown_pct": 9.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-09-30",
+      "price": 1440.67,
+      "benchmark_value": 294783,
+      "reactive_value": 232860,
+      "invested": 213000,
+      "drawdown_pct": 7.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-10-31",
+      "price": 1412.16,
+      "benchmark_value": 289950,
+      "reactive_value": 229252,
+      "invested": 214000,
+      "drawdown_pct": 8.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-11-30",
+      "price": 1416.18,
+      "benchmark_value": 291775,
+      "reactive_value": 230904,
+      "invested": 215000,
+      "drawdown_pct": 8.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2012-12-31",
+      "price": 1426.19,
+      "benchmark_value": 294837,
+      "reactive_value": 233536,
+      "invested": 216000,
+      "drawdown_pct": 8.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-01-31",
+      "price": 1498.11,
+      "benchmark_value": 310706,
+      "reactive_value": 246313,
+      "invested": 217000,
+      "drawdown_pct": 3.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-02-28",
+      "price": 1514.68,
+      "benchmark_value": 315142,
+      "reactive_value": 250037,
+      "invested": 218000,
+      "drawdown_pct": 2.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-03-31",
+      "price": 1569.19,
+      "benchmark_value": 327483,
+      "reactive_value": 260036,
+      "invested": 219000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-04-30",
+      "price": 1597.57,
+      "benchmark_value": 334406,
+      "reactive_value": 265739,
+      "invested": 220000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-05-31",
+      "price": 1630.74,
+      "benchmark_value": 342349,
+      "reactive_value": 272256,
+      "invested": 221000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-06-30",
+      "price": 1606.28,
+      "benchmark_value": 338214,
+      "reactive_value": 269173,
+      "invested": 222000,
+      "drawdown_pct": 1.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-07-31",
+      "price": 1685.73,
+      "benchmark_value": 355943,
+      "reactive_value": 283486,
+      "invested": 223000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-08-31",
+      "price": 1632.97,
+      "benchmark_value": 345803,
+      "reactive_value": 275614,
+      "invested": 224000,
+      "drawdown_pct": 3.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-09-30",
+      "price": 1681.55,
+      "benchmark_value": 357090,
+      "reactive_value": 284813,
+      "invested": 225000,
+      "drawdown_pct": 0.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-10-31",
+      "price": 1756.54,
+      "benchmark_value": 374015,
+      "reactive_value": 298515,
+      "invested": 226000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-11-30",
+      "price": 1805.81,
+      "benchmark_value": 385506,
+      "reactive_value": 307888,
+      "invested": 227000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2013-12-31",
+      "price": 1848.36,
+      "benchmark_value": 395590,
+      "reactive_value": 316143,
+      "invested": 228000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-01-31",
+      "price": 1782.59,
+      "benchmark_value": 382513,
+      "reactive_value": 305893,
+      "invested": 229000,
+      "drawdown_pct": 3.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-02-28",
+      "price": 1859.45,
+      "benchmark_value": 400006,
+      "reactive_value": 320082,
+      "invested": 230000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-03-31",
+      "price": 1872.34,
+      "benchmark_value": 403779,
+      "reactive_value": 323301,
+      "invested": 231000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-04-30",
+      "price": 1883.95,
+      "benchmark_value": 407283,
+      "reactive_value": 326306,
+      "invested": 232000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-05-31",
+      "price": 1923.57,
+      "benchmark_value": 416848,
+      "reactive_value": 334168,
+      "invested": 233000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-06-30",
+      "price": 1960.23,
+      "benchmark_value": 425793,
+      "reactive_value": 341537,
+      "invested": 234000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-07-31",
+      "price": 1930.67,
+      "benchmark_value": 420372,
+      "reactive_value": 337387,
+      "invested": 235000,
+      "drawdown_pct": 1.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-08-31",
+      "price": 2003.37,
+      "benchmark_value": 437201,
+      "reactive_value": 351091,
+      "invested": 236000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-09-30",
+      "price": 1972.29,
+      "benchmark_value": 431418,
+      "reactive_value": 346644,
+      "invested": 237000,
+      "drawdown_pct": 1.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-10-31",
+      "price": 2018.05,
+      "benchmark_value": 442428,
+      "reactive_value": 355687,
+      "invested": 238000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-11-30",
+      "price": 2067.56,
+      "benchmark_value": 454282,
+      "reactive_value": 365413,
+      "invested": 239000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2014-12-31",
+      "price": 2058.9,
+      "benchmark_value": 453379,
+      "reactive_value": 364883,
+      "invested": 240000,
+      "drawdown_pct": 0.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-01-31",
+      "price": 1994.99,
+      "benchmark_value": 440306,
+      "reactive_value": 354556,
+      "invested": 241000,
+      "drawdown_pct": 3.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-02-28",
+      "price": 2104.5,
+      "benchmark_value": 465476,
+      "reactive_value": 375019,
+      "invested": 242000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-03-31",
+      "price": 2067.89,
+      "benchmark_value": 458378,
+      "reactive_value": 369495,
+      "invested": 243000,
+      "drawdown_pct": 1.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-04-30",
+      "price": 2085.51,
+      "benchmark_value": 463284,
+      "reactive_value": 373643,
+      "invested": 244000,
+      "drawdown_pct": 0.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-05-31",
+      "price": 2107.39,
+      "benchmark_value": 469144,
+      "reactive_value": 378564,
+      "invested": 245000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-06-30",
+      "price": 2063.11,
+      "benchmark_value": 460287,
+      "reactive_value": 371609,
+      "invested": 246000,
+      "drawdown_pct": 2.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-07-31",
+      "price": 2103.84,
+      "benchmark_value": 470374,
+      "reactive_value": 379946,
+      "invested": 247000,
+      "drawdown_pct": 0.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-08-31",
+      "price": 1972.18,
+      "benchmark_value": 441937,
+      "reactive_value": 357168,
+      "invested": 248000,
+      "drawdown_pct": 6.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-09-30",
+      "price": 1920.03,
+      "benchmark_value": 431251,
+      "reactive_value": 348724,
+      "invested": 249000,
+      "drawdown_pct": 8.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-10-31",
+      "price": 2079.36,
+      "benchmark_value": 468038,
+      "reactive_value": 378662,
+      "invested": 250000,
+      "drawdown_pct": 1.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-11-30",
+      "price": 2080.41,
+      "benchmark_value": 469274,
+      "reactive_value": 379853,
+      "invested": 251000,
+      "drawdown_pct": 1.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2015-12-31",
+      "price": 2043.94,
+      "benchmark_value": 462048,
+      "reactive_value": 374194,
+      "invested": 252000,
+      "drawdown_pct": 3.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-01-31",
+      "price": 1940.24,
+      "benchmark_value": 439606,
+      "reactive_value": 356209,
+      "invested": 253000,
+      "drawdown_pct": 7.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-02-29",
+      "price": 1932.23,
+      "benchmark_value": 438791,
+      "reactive_value": 355739,
+      "invested": 254000,
+      "drawdown_pct": 8.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-03-31",
+      "price": 2059.74,
+      "benchmark_value": 468747,
+      "reactive_value": 380214,
+      "invested": 255000,
+      "drawdown_pct": 2.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-04-30",
+      "price": 2065.3,
+      "benchmark_value": 471012,
+      "reactive_value": 382241,
+      "invested": 256000,
+      "drawdown_pct": 2.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-05-31",
+      "price": 2096.95,
+      "benchmark_value": 479231,
+      "reactive_value": 389098,
+      "invested": 257000,
+      "drawdown_pct": 0.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-06-30",
+      "price": 2098.86,
+      "benchmark_value": 480667,
+      "reactive_value": 390453,
+      "invested": 258000,
+      "drawdown_pct": 0.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-07-31",
+      "price": 2173.6,
+      "benchmark_value": 498784,
+      "reactive_value": 405357,
+      "invested": 259000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-08-31",
+      "price": 2170.95,
+      "benchmark_value": 499175,
+      "reactive_value": 405863,
+      "invested": 260000,
+      "drawdown_pct": 0.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-09-30",
+      "price": 2168.27,
+      "benchmark_value": 499559,
+      "reactive_value": 406362,
+      "invested": 261000,
+      "drawdown_pct": 0.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-10-31",
+      "price": 2126.15,
+      "benchmark_value": 490855,
+      "reactive_value": 399468,
+      "invested": 262000,
+      "drawdown_pct": 2.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-11-30",
+      "price": 2198.81,
+      "benchmark_value": 508630,
+      "reactive_value": 414119,
+      "invested": 263000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2016-12-31",
+      "price": 2238.83,
+      "benchmark_value": 518887,
+      "reactive_value": 422657,
+      "invested": 264000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-01-31",
+      "price": 2278.87,
+      "benchmark_value": 529167,
+      "reactive_value": 431216,
+      "invested": 265000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-02-28",
+      "price": 2363.64,
+      "benchmark_value": 549851,
+      "reactive_value": 448256,
+      "invested": 266000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-03-31",
+      "price": 2362.72,
+      "benchmark_value": 550637,
+      "reactive_value": 449082,
+      "invested": 267000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-04-30",
+      "price": 2384.2,
+      "benchmark_value": 556643,
+      "reactive_value": 454164,
+      "invested": 268000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-05-31",
+      "price": 2411.8,
+      "benchmark_value": 564087,
+      "reactive_value": 460422,
+      "invested": 269000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-06-30",
+      "price": 2423.41,
+      "benchmark_value": 567802,
+      "reactive_value": 463638,
+      "invested": 270000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-07-31",
+      "price": 2470.3,
+      "benchmark_value": 579789,
+      "reactive_value": 473609,
+      "invested": 271000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-08-31",
+      "price": 2471.65,
+      "benchmark_value": 581105,
+      "reactive_value": 474868,
+      "invested": 272000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-09-30",
+      "price": 2519.36,
+      "benchmark_value": 593322,
+      "reactive_value": 485034,
+      "invested": 273000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-10-31",
+      "price": 2575.26,
+      "benchmark_value": 607487,
+      "reactive_value": 496796,
+      "invested": 274000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-11-30",
+      "price": 2647.58,
+      "benchmark_value": 625547,
+      "reactive_value": 511747,
+      "invested": 275000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2017-12-31",
+      "price": 2673.61,
+      "benchmark_value": 632697,
+      "reactive_value": 517779,
+      "invested": 276000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-01-31",
+      "price": 2823.81,
+      "benchmark_value": 669241,
+      "reactive_value": 547867,
+      "invested": 277000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-02-28",
+      "price": 2713.83,
+      "benchmark_value": 644176,
+      "reactive_value": 527529,
+      "invested": 278000,
+      "drawdown_pct": 3.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-03-31",
+      "price": 2640.87,
+      "benchmark_value": 627858,
+      "reactive_value": 514347,
+      "invested": 279000,
+      "drawdown_pct": 6.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-04-30",
+      "price": 2648.05,
+      "benchmark_value": 630565,
+      "reactive_value": 516745,
+      "invested": 280000,
+      "drawdown_pct": 6.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-05-31",
+      "price": 2705.27,
+      "benchmark_value": 645190,
+      "reactive_value": 528911,
+      "invested": 281000,
+      "drawdown_pct": 4.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-06-30",
+      "price": 2718.37,
+      "benchmark_value": 649314,
+      "reactive_value": 532472,
+      "invested": 282000,
+      "drawdown_pct": 3.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-07-31",
+      "price": 2816.29,
+      "benchmark_value": 673704,
+      "reactive_value": 552653,
+      "invested": 283000,
+      "drawdown_pct": 0.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-08-31",
+      "price": 2901.52,
+      "benchmark_value": 695092,
+      "reactive_value": 570378,
+      "invested": 284000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-09-30",
+      "price": 2913.98,
+      "benchmark_value": 699077,
+      "reactive_value": 573827,
+      "invested": 285000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-10-31",
+      "price": 2711.74,
+      "benchmark_value": 651559,
+      "reactive_value": 535002,
+      "invested": 286000,
+      "drawdown_pct": 6.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-11-30",
+      "price": 2760.17,
+      "benchmark_value": 664195,
+      "reactive_value": 545556,
+      "invested": 287000,
+      "drawdown_pct": 5.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2018-12-31",
+      "price": 2506.85,
+      "benchmark_value": 604237,
+      "reactive_value": 496487,
+      "invested": 288000,
+      "drawdown_pct": 14.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-01-31",
+      "price": 2704.1,
+      "benchmark_value": 652782,
+      "reactive_value": 536553,
+      "invested": 289000,
+      "drawdown_pct": 7.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-02-28",
+      "price": 2784.49,
+      "benchmark_value": 673188,
+      "reactive_value": 553504,
+      "invested": 290000,
+      "drawdown_pct": 4.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-03-31",
+      "price": 2834.4,
+      "benchmark_value": 686254,
+      "reactive_value": 564425,
+      "invested": 291000,
+      "drawdown_pct": 2.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-04-30",
+      "price": 2945.83,
+      "benchmark_value": 714233,
+      "reactive_value": 587614,
+      "invested": 292000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-05-31",
+      "price": 2752.06,
+      "benchmark_value": 668253,
+      "reactive_value": 549962,
+      "invested": 293000,
+      "drawdown_pct": 6.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-06-30",
+      "price": 2941.76,
+      "benchmark_value": 715316,
+      "reactive_value": 588871,
+      "invested": 294000,
+      "drawdown_pct": 0.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-07-31",
+      "price": 2980.38,
+      "benchmark_value": 725706,
+      "reactive_value": 597602,
+      "invested": 295000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-08-31",
+      "price": 2926.46,
+      "benchmark_value": 713577,
+      "reactive_value": 587791,
+      "invested": 296000,
+      "drawdown_pct": 1.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-09-30",
+      "price": 2976.74,
+      "benchmark_value": 726837,
+      "reactive_value": 598890,
+      "invested": 297000,
+      "drawdown_pct": 0.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-10-31",
+      "price": 3037.56,
+      "benchmark_value": 742688,
+      "reactive_value": 612126,
+      "invested": 298000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-11-30",
+      "price": 3140.98,
+      "benchmark_value": 768974,
+      "reactive_value": 633967,
+      "invested": 299000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2019-12-31",
+      "price": 3230.78,
+      "benchmark_value": 791959,
+      "reactive_value": 653092,
+      "invested": 300000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-01-31",
+      "price": 3225.52,
+      "benchmark_value": 791670,
+      "reactive_value": 653029,
+      "invested": 301000,
+      "drawdown_pct": 0.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-02-29",
+      "price": 2954.22,
+      "benchmark_value": 726082,
+      "reactive_value": 599102,
+      "invested": 302000,
+      "drawdown_pct": 8.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-03-31",
+      "price": 2584.59,
+      "benchmark_value": 636235,
+      "reactive_value": 524143,
+      "invested": 303000,
+      "drawdown_pct": 20.0,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2020-04-30",
+      "price": 2912.43,
+      "benchmark_value": 717938,
+      "reactive_value": 525143,
+      "invested": 304000,
+      "drawdown_pct": 9.9,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2020-05-31",
+      "price": 3044.31,
+      "benchmark_value": 751447,
+      "reactive_value": 526143,
+      "invested": 305000,
+      "drawdown_pct": 5.8,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2020-06-30",
+      "price": 3100.29,
+      "benchmark_value": 766265,
+      "reactive_value": 536818,
+      "invested": 306000,
+      "drawdown_pct": 4.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-07-31",
+      "price": 3271.12,
+      "benchmark_value": 809487,
+      "reactive_value": 567397,
+      "invested": 307000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-08-31",
+      "price": 3500.31,
+      "benchmark_value": 867204,
+      "reactive_value": 608152,
+      "invested": 308000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-09-30",
+      "price": 3363.0,
+      "benchmark_value": 834185,
+      "reactive_value": 585295,
+      "invested": 309000,
+      "drawdown_pct": 3.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-10-31",
+      "price": 3269.96,
+      "benchmark_value": 812107,
+      "reactive_value": 570103,
+      "invested": 310000,
+      "drawdown_pct": 6.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-11-30",
+      "price": 3621.63,
+      "benchmark_value": 900445,
+      "reactive_value": 632415,
+      "invested": 311000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2020-12-31",
+      "price": 3756.07,
+      "benchmark_value": 934871,
+      "reactive_value": 656891,
+      "invested": 312000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-01-31",
+      "price": 3714.24,
+      "benchmark_value": 925460,
+      "reactive_value": 650575,
+      "invested": 313000,
+      "drawdown_pct": 1.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-02-28",
+      "price": 3811.15,
+      "benchmark_value": 950606,
+      "reactive_value": 668550,
+      "invested": 314000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-03-31",
+      "price": 3972.89,
+      "benchmark_value": 991949,
+      "reactive_value": 697922,
+      "invested": 315000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-04-30",
+      "price": 4181.17,
+      "benchmark_value": 1044952,
+      "reactive_value": 735511,
+      "invested": 316000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-05-31",
+      "price": 4204.11,
+      "benchmark_value": 1051685,
+      "reactive_value": 740546,
+      "invested": 317000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-06-30",
+      "price": 4297.5,
+      "benchmark_value": 1076047,
+      "reactive_value": 757997,
+      "invested": 318000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-07-31",
+      "price": 4395.26,
+      "benchmark_value": 1101525,
+      "reactive_value": 776240,
+      "invested": 319000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-08-31",
+      "price": 4522.68,
+      "benchmark_value": 1134459,
+      "reactive_value": 799743,
+      "invested": 320000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-09-30",
+      "price": 4307.54,
+      "benchmark_value": 1081494,
+      "reactive_value": 762700,
+      "invested": 321000,
+      "drawdown_pct": 4.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-10-31",
+      "price": 4605.38,
+      "benchmark_value": 1157272,
+      "reactive_value": 816436,
+      "invested": 322000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-11-30",
+      "price": 4567.0,
+      "benchmark_value": 1148628,
+      "reactive_value": 810632,
+      "invested": 323000,
+      "drawdown_pct": 0.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2021-12-31",
+      "price": 4766.18,
+      "benchmark_value": 1199723,
+      "reactive_value": 846986,
+      "invested": 324000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-01-31",
+      "price": 4515.55,
+      "benchmark_value": 1137635,
+      "reactive_value": 803447,
+      "invested": 325000,
+      "drawdown_pct": 5.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-02-28",
+      "price": 4373.94,
+      "benchmark_value": 1102959,
+      "reactive_value": 779251,
+      "invested": 326000,
+      "drawdown_pct": 8.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-03-31",
+      "price": 4530.41,
+      "benchmark_value": 1143415,
+      "reactive_value": 808127,
+      "invested": 327000,
+      "drawdown_pct": 4.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-04-30",
+      "price": 4131.93,
+      "benchmark_value": 1043844,
+      "reactive_value": 738047,
+      "invested": 328000,
+      "drawdown_pct": 13.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-05-31",
+      "price": 4132.15,
+      "benchmark_value": 1044899,
+      "reactive_value": 739086,
+      "invested": 329000,
+      "drawdown_pct": 13.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2022-06-30",
+      "price": 3785.38,
+      "benchmark_value": 958212,
+      "reactive_value": 677062,
+      "invested": 330000,
+      "drawdown_pct": 20.6,
+      "reactive_state": "IN_CASH",
+      "event": "PANIC_SELL"
+    },
+    {
+      "date": "2022-07-31",
+      "price": 4130.29,
+      "benchmark_value": 1046520,
+      "reactive_value": 678062,
+      "invested": 331000,
+      "drawdown_pct": 13.3,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2022-08-31",
+      "price": 3955.0,
+      "benchmark_value": 1003106,
+      "reactive_value": 679062,
+      "invested": 332000,
+      "drawdown_pct": 17.0,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2022-09-30",
+      "price": 3585.62,
+      "benchmark_value": 910420,
+      "reactive_value": 680062,
+      "invested": 333000,
+      "drawdown_pct": 24.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2022-10-31",
+      "price": 3871.98,
+      "benchmark_value": 984129,
+      "reactive_value": 681062,
+      "invested": 334000,
+      "drawdown_pct": 18.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2022-11-30",
+      "price": 4080.11,
+      "benchmark_value": 1038029,
+      "reactive_value": 682062,
+      "invested": 335000,
+      "drawdown_pct": 14.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2022-12-31",
+      "price": 3839.5,
+      "benchmark_value": 977815,
+      "reactive_value": 683062,
+      "invested": 336000,
+      "drawdown_pct": 19.4,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2023-01-31",
+      "price": 4076.6,
+      "benchmark_value": 1039198,
+      "reactive_value": 684062,
+      "invested": 337000,
+      "drawdown_pct": 14.5,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2023-02-28",
+      "price": 3970.15,
+      "benchmark_value": 1013062,
+      "reactive_value": 685062,
+      "invested": 338000,
+      "drawdown_pct": 16.7,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2023-03-31",
+      "price": 4109.31,
+      "benchmark_value": 1049571,
+      "reactive_value": 686062,
+      "invested": 339000,
+      "drawdown_pct": 13.8,
+      "reactive_state": "IN_CASH",
+      "event": null
+    },
+    {
+      "date": "2023-04-30",
+      "price": 4169.48,
+      "benchmark_value": 1065939,
+      "reactive_value": 687062,
+      "invested": 340000,
+      "drawdown_pct": 12.5,
+      "reactive_state": "INVESTED",
+      "event": "RE_ENTER"
+    },
+    {
+      "date": "2023-05-31",
+      "price": 4179.83,
+      "benchmark_value": 1069586,
+      "reactive_value": 689768,
+      "invested": 341000,
+      "drawdown_pct": 12.3,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-06-30",
+      "price": 4450.38,
+      "benchmark_value": 1139817,
+      "reactive_value": 735414,
+      "invested": 342000,
+      "drawdown_pct": 6.6,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-07-31",
+      "price": 4588.96,
+      "benchmark_value": 1176310,
+      "reactive_value": 759314,
+      "invested": 343000,
+      "drawdown_pct": 3.7,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-08-31",
+      "price": 4507.66,
+      "benchmark_value": 1156470,
+      "reactive_value": 746862,
+      "invested": 344000,
+      "drawdown_pct": 5.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-09-30",
+      "price": 4288.05,
+      "benchmark_value": 1101127,
+      "reactive_value": 711475,
+      "invested": 345000,
+      "drawdown_pct": 10.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-10-31",
+      "price": 4193.8,
+      "benchmark_value": 1077925,
+      "reactive_value": 696837,
+      "invested": 346000,
+      "drawdown_pct": 12.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-11-30",
+      "price": 4567.8,
+      "benchmark_value": 1175053,
+      "reactive_value": 759981,
+      "invested": 347000,
+      "drawdown_pct": 4.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2023-12-31",
+      "price": 4769.83,
+      "benchmark_value": 1228025,
+      "reactive_value": 794594,
+      "invested": 348000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-01-31",
+      "price": 4845.65,
+      "benchmark_value": 1248545,
+      "reactive_value": 808225,
+      "invested": 349000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-02-29",
+      "price": 5096.27,
+      "benchmark_value": 1314121,
+      "reactive_value": 851027,
+      "invested": 350000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-03-31",
+      "price": 5254.35,
+      "benchmark_value": 1355883,
+      "reactive_value": 878425,
+      "invested": 351000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-04-30",
+      "price": 5035.69,
+      "benchmark_value": 1300458,
+      "reactive_value": 842869,
+      "invested": 352000,
+      "drawdown_pct": 4.2,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-05-31",
+      "price": 5277.51,
+      "benchmark_value": 1363908,
+      "reactive_value": 884345,
+      "invested": 353000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-06-30",
+      "price": 5460.48,
+      "benchmark_value": 1412194,
+      "reactive_value": 916005,
+      "invested": 354000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-07-31",
+      "price": 5522.3,
+      "benchmark_value": 1429182,
+      "reactive_value": 927375,
+      "invested": 355000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-08-31",
+      "price": 5648.4,
+      "benchmark_value": 1462817,
+      "reactive_value": 949551,
+      "invested": 356000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-09-30",
+      "price": 5762.48,
+      "benchmark_value": 1493361,
+      "reactive_value": 969729,
+      "invested": 357000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-10-31",
+      "price": 5705.45,
+      "benchmark_value": 1479582,
+      "reactive_value": 961132,
+      "invested": 358000,
+      "drawdown_pct": 1.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-11-30",
+      "price": 6032.38,
+      "benchmark_value": 1565364,
+      "reactive_value": 1017206,
+      "invested": 359000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2024-12-31",
+      "price": 5881.63,
+      "benchmark_value": 1527245,
+      "reactive_value": 992786,
+      "invested": 360000,
+      "drawdown_pct": 2.5,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-01-31",
+      "price": 6040.53,
+      "benchmark_value": 1569506,
+      "reactive_value": 1020607,
+      "invested": 361000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-02-28",
+      "price": 5954.5,
+      "benchmark_value": 1548153,
+      "reactive_value": 1007072,
+      "invested": 362000,
+      "drawdown_pct": 1.4,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-03-31",
+      "price": 5611.85,
+      "benchmark_value": 1460065,
+      "reactive_value": 950120,
+      "invested": 363000,
+      "drawdown_pct": 7.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-04-30",
+      "price": 5569.06,
+      "benchmark_value": 1449932,
+      "reactive_value": 943876,
+      "invested": 364000,
+      "drawdown_pct": 7.8,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-05-31",
+      "price": 5911.69,
+      "benchmark_value": 1540137,
+      "reactive_value": 1002946,
+      "invested": 365000,
+      "drawdown_pct": 2.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-06-30",
+      "price": 6204.95,
+      "benchmark_value": 1617539,
+      "reactive_value": 1053699,
+      "invested": 366000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-07-31",
+      "price": 6339.39,
+      "benchmark_value": 1653585,
+      "reactive_value": 1077530,
+      "invested": 367000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-08-31",
+      "price": 6460.26,
+      "benchmark_value": 1686113,
+      "reactive_value": 1099074,
+      "invested": 368000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-09-30",
+      "price": 6688.46,
+      "benchmark_value": 1746673,
+      "reactive_value": 1138898,
+      "invested": 369000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-10-31",
+      "price": 6840.2,
+      "benchmark_value": 1787299,
+      "reactive_value": 1165736,
+      "invested": 370000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-11-30",
+      "price": 6849.09,
+      "benchmark_value": 1790622,
+      "reactive_value": 1168251,
+      "invested": 371000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2025-12-31",
+      "price": 6845.5,
+      "benchmark_value": 1790684,
+      "reactive_value": 1168638,
+      "invested": 372000,
+      "drawdown_pct": 0.1,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2026-01-31",
+      "price": 6939.03,
+      "benchmark_value": 1816150,
+      "reactive_value": 1185605,
+      "invested": 373000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2026-02-28",
+      "price": 6878.88,
+      "benchmark_value": 1801407,
+      "reactive_value": 1176328,
+      "invested": 374000,
+      "drawdown_pct": 0.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2026-03-31",
+      "price": 6528.52,
+      "benchmark_value": 1710656,
+      "reactive_value": 1117415,
+      "invested": 375000,
+      "drawdown_pct": 5.9,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2026-04-30",
+      "price": 7209.01,
+      "benchmark_value": 1889964,
+      "reactive_value": 1234886,
+      "invested": 376000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    },
+    {
+      "date": "2026-05-31",
+      "price": 7473.47,
+      "benchmark_value": 1960296,
+      "reactive_value": 1281188,
+      "invested": 377000,
+      "drawdown_pct": 0.0,
+      "reactive_state": "INVESTED",
+      "event": null
+    }
+  ]
+}
